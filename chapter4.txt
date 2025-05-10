@@ -1,7 +1,12 @@
-Well it worked last time how about this one
-I'm trying to see if it add my changes or
-overwrites it instead of adding the change!
 
 i gonna do a new Story!
 
 
+
+
+
+
+
+Well there's something i don't get it i think
+git ovewrites the lines he doesn't append it 
+guess you have understand pretty well!
