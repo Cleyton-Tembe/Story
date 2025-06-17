@@ -159,6 +159,7 @@ menuButton.addEventListener('click', (e)=>{
         container.classList.remove('active');
         menuButton.style.opacity = "1";
         menuButton.removeAttribute('disabled');
+        startButton.removeAttribute('disabled');
 
     }else{
 
@@ -166,7 +167,7 @@ menuButton.addEventListener('click', (e)=>{
         container.classList.add('active');
         menuButton.style.opacity = "0";
         menuButton.setAttribute('disabled', 'true');
-
+        startButton.setAttribute('disabled', 'true');
 
     }
     

@@ -513,17 +513,9 @@ main.active{
         min-height: 100dvh;
     }
 
-    .bx-header{
-        position: fixed;
-        padding: 0;
-        height: 100%;
-        width: 230px;
-        transition: .4s ease-in-out;
-        z-index: 100;
-    }
-
     .bx-nav{
-        position: absolute;
+        position: fixed;
+        top: 0;
         left: -230px;
         margin: 0;
         width: 230px;
@@ -535,6 +527,7 @@ main.active{
         justify-content: flex-start;
         gap: 60px;
         transition: left .3s ease;
+        z-index: 100;
     }
 
     .bx-nav.active{
