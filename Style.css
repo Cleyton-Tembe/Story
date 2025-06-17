@@ -16,8 +16,15 @@ a{
 body{
     background-color: #09001d;
     color: #fff;
+    /* Add these to ensure full coverage */
+    height: 100%;
+    width: 100%;
 }
 
+/* Add this to ensure html also takes full height */
+html {
+    height: 100%;
+}
 
 main{
     min-height: 100vh;
@@ -26,7 +33,7 @@ main{
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    transition: 3.s ease;
+    transition: 3s ease;
     overflow: hidden;
 }
 
@@ -44,7 +51,6 @@ main.active{
     padding: 20px 0;
     z-index: 100;
 }
-
 
 .bx-nav h1{
     font-weight: 900;
@@ -95,6 +101,10 @@ main.active{
     justify-content: space-between;
 }
 
+.container.active{
+    filter: blur(2px);
+}
+
 .section-hero{
     position: relative;
     left: -50%;
@@ -102,7 +112,6 @@ main.active{
     display: flex;
     justify-content: center;
     align-items: center;
-
 }
 
 .section-hero .title-info{
@@ -122,7 +131,6 @@ main.active{
 }
 
 .title-info p{
-
     font-size: 1rem;
     font-weight: 400;
     color: #fff;
@@ -130,7 +138,6 @@ main.active{
     text-align: center;
     text-shadow: 0 0 10px rgba(0, 0, 0, .3);
     margin-bottom: 30px;
-
 }
 
 .title-info button{
@@ -144,10 +151,11 @@ main.active{
     font-weight: 600;
     box-shadow: 0 0 10px #c40094;
     outline: none;
-    letter-spacing: 1;
+    letter-spacing: 1px;
     cursor: pointer;
     transition: .5s;
 }
+
 
 .title-info button:hover{
     background-color: #09001d;
@@ -188,13 +196,11 @@ main.active{
 }
 
 .quiz-guide .bx-btn{
-
     padding: 10px 0 0 0;
     border-top: 1px solid #999;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    
 }
 
 .bx-btn .info-btn{
@@ -231,14 +237,11 @@ main.active{
     border-color:#950170;
 }
 
-
 .popup-info.active{
     opacity: 1;
     pointer-events: auto;
     transform: translate(-50%, -50%) scale(1);
 }
-
-
 
 /*------------------- Quiz Section ----------------------------*/
 
@@ -282,9 +285,7 @@ main.active{
 }
 
 .form-quiz > div{
-
     font-size: 1.2rem;
-
 }
 
 .form-quiz > h1{
@@ -357,13 +358,12 @@ main.active{
 }
 
 .quiz-track{
-
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-top: 20px;
     padding-top: 10px;
-    border-top:2px solid #c40094;
+    border-top: 2px solid #c40094;
 }
 
 .number-question{
@@ -426,7 +426,6 @@ main.active{
 
 .section-quiz .quiz-result h2{
     font-size: 3.1rem;
-
 }
 
 .quiz-percentage{
@@ -435,7 +434,6 @@ main.active{
     display: flex;
     flex-direction: column;
     align-items: center;
-
 }
 
 .quiz-percentage .circular-progress{
@@ -469,15 +467,11 @@ main.active{
     font-weight: 600;
 }
 
-
-
 .quiz-result .quiz-score{
     font-size: 1.4rem;
     font-weight: 600;
     margin-top: 30px;
 }
-
-
 
 .quiz-result .quiz-btns button{
     width: 130px;
@@ -502,7 +496,6 @@ main.active{
 .quiz-btns button:nth-child(2){
     background: transparent;
     color: #c40094;
-
 }
 
 .quiz-btns button:nth-child(2):hover{
@@ -510,11 +503,13 @@ main.active{
     color: #fff;
 }
 
-/*--------------------Media Querry---------------*/
+/*--------------------Media Query---------------*/
 
-@media (max-width:768px){
-
-    .main{
+@media (max-width: 768px){
+    /* Ensure consistent viewport height handling */
+    main{
+        min-height: 100vh;
+        /* Add this as fallback for older browsers */
         min-height: 100dvh;
     }
 
@@ -522,8 +517,9 @@ main.active{
         position: fixed;
         padding: 0;
         height: 100%;
-        width: 100%;
+        width: 230px;
         transition: .4s ease-in-out;
+        z-index: 100;
     }
 
     .bx-nav{
@@ -536,7 +532,7 @@ main.active{
         background-color: #09001d;
         flex-direction: column;
         align-items: flex-start;
-        justify-content:flex-start;
+        justify-content: flex-start;
         gap: 60px;
         transition: left .3s ease;
     }
@@ -554,10 +550,11 @@ main.active{
         display: block;
         position: absolute;
         top: 0;
-        right: 0;
+        left: 0;
         margin: 10px 20px;
         color: #fff;
         cursor: pointer;
+    
     }
 
     .menu-btn:hover{
@@ -579,16 +576,56 @@ main.active{
         color: #c40094;
     }
 
-    .section-hero .title-info{
-
-       
-
+    /* Ensure container also maintains proper height on mobile */
+    .container{
+        min-height: 100vh;
+        min-height: 100dvh;
     }
 
-    .quiz-result{
-      
-        flex: 1 1 0;
+    /* Adjust form sizes for mobile */
+    .form-quiz{
+        width: 90%;
+        max-width: 500px;
+    }
+
+    .popup-info{
+        width: 90%;
+        max-width: 500px;
+    }
+
+    .section-quiz .quiz-result{
+        width: 90%;
+        max-width: 500px;
+    }
+
+    /* Adjust title info for mobile */
+    .title-info h1{
+        font-size: 3rem;
+    }
+
+    .title-info{
+        max-width: 90%;
+    }
+
+    .quiz-guide .bx-btn{
+        display: flex;
+        flex-direction: column-reverse;
+        gap: 10px;
+        width: 100%;
+    }
+
+    .quiz-guide .bx-btn .info-btn{
+        width: 100%;
+    }
+
+    .quiz-result .quiz-btns{
+        display: flex;
+        flex-direction: column;
         align-items: center;
+        width: 100%;
     }
-    
+
+    .quiz-result .quiz-btns button{
+        width: 100%;
+    }
 }

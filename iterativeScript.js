@@ -79,6 +79,7 @@ const goHomeButton = document.querySelector('.go-Home');
 const bxNav = document.querySelector('.bx-nav');
 const menuButton = document.querySelector('.menu-btn');
 const closeButton = document.querySelector('.close-btn');
+const container= document.querySelector('.container');
 
 let questionCount = 0;
 
@@ -155,16 +156,24 @@ menuButton.addEventListener('click', (e)=>{
     if(bxNav.className === 'bx-nav active'){
 
         bxNav.classList.remove('active');
+        container.classList.remove('active');
+        menuButton.style.opacity = "1";
+        menuButton.removeAttribute('disabled');
 
     }else{
 
         bxNav.classList.add('active');
+        container.classList.add('active');
+        menuButton.style.opacity = "0";
+        menuButton.setAttribute('disabled', 'true');
+
 
     }
     
 })
 
 closeButton.addEventListener('click', ()=> menuButton.click());
+
 
 
 function showQuestion(ind){
@@ -276,6 +285,3 @@ function reset(){
 }
 
 var score = 0;
-
-
-
