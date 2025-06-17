@@ -1,0 +1,594 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+}
+
+ul{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+body{
+    background-color: #09001d;
+    color: #fff;
+}
+
+
+main{
+    min-height: 100vh;
+    width: 100%;
+    background-image: url(Quiz-Website/background.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition: 3.s ease;
+    overflow: hidden;
+}
+
+main.active{
+    filter: blur(2px);
+}
+
+/*--------------------------------Navigation Section------------------------*/
+
+.bx-header{
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    padding: 20px 0;
+    z-index: 100;
+}
+
+
+.bx-nav h1{
+    font-weight: 900;
+    color: #fff;
+    font-size: 2rem;
+    filter: drop-shadow(0 0 5px #09001d);
+}
+
+.bx-nav{
+    position: relative;
+    width: 75%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.bx-nav .nav-links{
+    display: flex;
+    gap: 2.5rem;
+}
+
+.nav-links a{
+    font-size: 1.2rem;
+    color: #fff;
+    font-weight: 400;
+    transition: .3s;
+}
+
+.nav-links a:hover, a.active{
+    color: #c40094;
+}
+
+.menu-btn{
+    display: none;
+}
+
+.close-btn{
+    display: none;
+}
+
+/*--------------------Hero Section-----------------------------------*/
+
+.container{
+    min-height: 100vh;
+    width: 200%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.section-hero{
+    position: relative;
+    left: -50%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.section-hero .title-info{
+    max-width: 600px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.title-info h1{
+    color: #fff;
+    font-weight: 900;
+    font-size: 5rem;
+    text-shadow: 0 0 10px rgba(0, 0, 0, .3);
+    text-align: center;
+}
+
+.title-info p{
+
+    font-size: 1rem;
+    font-weight: 400;
+    color: #fff;
+    margin-bottom: 1.1rem;
+    text-align: center;
+    text-shadow: 0 0 10px rgba(0, 0, 0, .3);
+    margin-bottom: 30px;
+
+}
+
+.title-info button{
+    background-color: #c40094;
+    color: #fff;
+    border-radius: 6px;
+    width: 190px;
+    height: 55px;
+    border: 2px solid #fff;
+    font-size: 1rem;
+    font-weight: 600;
+    box-shadow: 0 0 10px #c40094;
+    outline: none;
+    letter-spacing: 1;
+    cursor: pointer;
+    transition: .5s;
+}
+
+.title-info button:hover{
+    background-color: #09001d;
+    box-shadow: none;
+}
+
+/*----------------Info popup----------------------------*/
+
+.popup-info{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(.9);
+    opacity: 0;
+    pointer-events: none;
+    transition: .3s ease;
+    background: #fff;
+    width: 500px;
+    padding: 30px;
+    border-radius: 6px;
+}
+
+.popup-info .quiz-guide{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.quiz-guide h2{
+    font-size: 3.1rem;
+    color: #c40094;
+}
+
+.quiz-guide ul{
+    margin-bottom: 4px;
+    color: #333;
+    font-size: 1.1rem;
+}
+
+.quiz-guide .bx-btn{
+
+    padding: 10px 0 0 0;
+    border-top: 1px solid #999;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+
+.bx-btn .info-btn{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 130px;
+    height: 45px;
+    border-radius: 6px;
+    outline: none;
+    border: 2px solid #c40094;
+    background-color: #c40094;
+    color: #fff;
+    font-size: 1.1rem;
+    font-weight: 600;
+    outline: none;
+    cursor: pointer;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+    transition: .5s;
+}
+
+.bx-btn .info-btn:nth-child(1){
+    background: transparent;
+    color: #c40094;
+}
+
+.bx-btn .info-btn:nth-child(1):hover{
+    background: #c40094;
+    color: #fff;
+}
+
+.bx-btn .info-btn:nth-child(2):hover{
+    background-color: #950170;
+    border-color:#950170;
+}
+
+
+.popup-info.active{
+    opacity: 1;
+    pointer-events: auto;
+    transform: translate(-50%, -50%) scale(1);
+}
+
+
+
+/*------------------- Quiz Section ----------------------------*/
+
+.section-quiz{
+    position: relative;
+    left: 50%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #09001d;
+    transition: .8s ease-in-out;
+    transition-delay: .25s;
+    z-index: 100;
+}
+
+.section-quiz.active{
+    left: 0;
+}
+
+/*----------------------Quiz Form---------------------------*/
+
+.form-quiz{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background-color: #09001d;
+    padding: 20px 30px;
+    border: 2px solid #950170;
+    border-radius: 6px;
+}
+
+.form-quiz.deactive{
+    opacity: 0;
+    pointer-events: none;
+}
+
+.form-quiz > div{
+
+    font-size: 1.2rem;
+
+}
+
+.form-quiz > h1{
+    text-align: center;
+    font-size: 2.5rem;
+    background: linear-gradient(45deg, transparent, #c40094, transparent);
+}
+
+.form-quiz .header-quiz{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #c40094;
+}
+
+.form-quiz .header-quiz p{
+    font-size: .9rem;
+    font-weight: 500;
+}
+
+.form-quiz .header-quiz .score{
+    background-color: #c40094;
+    padding: 7px;
+    border-radius: 3px;
+}
+
+.form-quiz .options{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.form-quiz .question{
+    font-size: 1.6rem;
+    font-weight: 600;
+}
+
+.form-quiz .options span{
+    width: 100%;
+    border: 2px solid;
+    height: 34px;
+    display: flex;
+    align-items: center;
+    padding: 12px;
+    background: transparent;
+    border: 2px solid rgba(255, 255, 255, .2);
+    border-radius: 5px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.form-quiz .options span:hover{
+    background-color: rgba(255, 255, 255, .1);
+    border-color: rgba(255, 255, 255, .1);
+}
+
+.form-quiz .options .option.active{
+    background-color: #09001d;
+    color: #00a63d;
+    border-color: #00a63d;
+}
+
+.form-quiz .options .option.wrong{
+    background-color: #09001d;
+    color: #a60045;
+    border-color: #a60045;
+}
+
+.quiz-track{
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+    padding-top: 10px;
+    border-top:2px solid #c40094;
+}
+
+.number-question{
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+.next{
+    width: 100px;
+    height: 45px;
+    background-color: rgba(255, 255, 255, .1);
+    border: 2px solid rgba(255, 255, 255, .1);
+    color: rgba(255, 255, 255, .3);
+    outline: none;
+    border-radius: 6px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.next:hover{
+    background-color: #950170;
+    border-color: #950170;
+}
+
+.next.active{
+    background-color: #c40094;
+    color: #fff;
+}
+
+.disable{
+    pointer-events: none;
+}
+
+/*---------------------- Quiz Result ---------------------*/
+
+.section-quiz .quiz-result{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 2px solid #c40094;
+    width: 500px;
+    background: transparent;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    border-radius: 5px;
+    flex-direction: column;
+    align-items: center;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.quiz-result.active{
+    pointer-events: auto;
+    opacity: 1;
+}
+
+.section-quiz .quiz-result h2{
+    font-size: 3.1rem;
+
+}
+
+.quiz-percentage{
+    width: 300px;
+    margin: 20px 0 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.quiz-percentage .circular-progress{
+    position: relative;
+    width: 250px;
+    height: 250px;
+    background: conic-gradient(#c40094, 3.6deg, rgba(255, 255, 255, .1) 0deg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    overflow: hidden;
+    transition: .3s ease;
+}
+
+.quiz-percentage .circular-progress::before{
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 210px;
+    height: 210px;
+    background-color: #09001d;
+    border-radius: 50%;
+}
+
+.circular-progress .progress-bar{
+    position: relative;
+    font-size: 3rem;
+    font-weight: 600;
+}
+
+
+
+.quiz-result .quiz-score{
+    font-size: 1.4rem;
+    font-weight: 600;
+    margin-top: 30px;
+}
+
+
+
+.quiz-result .quiz-btns button{
+    width: 130px;
+    height: 47px;
+    outline: none;
+    background-color: #c40094;
+    border: 2px solid #c40094;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #fff;
+    cursor: pointer;
+    margin: 0 20px 20px;
+    transition: .5s;
+}
+
+.quiz-btns button:nth-child(1):hover{
+    background-color: #950170;
+    border-color: #950170;
+}
+
+.quiz-btns button:nth-child(2){
+    background: transparent;
+    color: #c40094;
+
+}
+
+.quiz-btns button:nth-child(2):hover{
+    background-color: #c40094;
+    color: #fff;
+}
+
+/*--------------------Media Querry---------------*/
+
+@media (max-width:768px){
+
+    .main{
+        min-height: 100dvh;
+    }
+
+    .bx-header{
+        position: fixed;
+        padding: 0;
+        height: 100%;
+        width: 100%;
+        transition: .4s ease-in-out;
+    }
+
+    .bx-nav{
+        position: absolute;
+        left: -230px;
+        margin: 0;
+        width: 230px;
+        height: 100%;
+        padding: 10px 20px;
+        background-color: #09001d;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content:flex-start;
+        gap: 60px;
+        transition: left .3s ease;
+    }
+
+    .bx-nav.active{
+        left: 0;
+    }
+
+    .bx-nav .nav-links{
+        flex-direction: column;
+        font-size: 1.3rem;
+    }
+
+    .menu-btn{
+        display: block;
+        position: absolute;
+        top: 0;
+        right: 0;
+        margin: 10px 20px;
+        color: #fff;
+        cursor: pointer;
+    }
+
+    .menu-btn:hover{
+        color: #c40094;
+    }
+
+    .close-btn{
+        display: block;
+        position: absolute;
+        top: 10px;
+        right: 20px;
+        margin: 10px 0;
+        font-size: 1.3rem;
+        color: #fff;
+        cursor: pointer;
+    }
+
+    .close-btn:hover{
+        color: #c40094;
+    }
+
+    .section-hero .title-info{
+
+       
+
+    }
+
+    .quiz-result{
+      
+        flex: 1 1 0;
+        align-items: center;
+    }
+    
+}
