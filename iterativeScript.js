@@ -411,8 +411,8 @@ function calculateResult(){
 
         progressValeu++;
 
-        quizResult.textContent = `${result}%`;
-        quizProgress.style.background = `conic-gradient(#c40094 ${result* 3.6}deg, rgba(255, 255, 255, .1) 0deg)`;
+        quizResult.textContent = `${progressValeu}%`;
+        quizProgress.style.background = `conic-gradient(#c40094 ${progressValeu* 3.6}deg, rgba(255, 255, 255, .1) 0deg)`;
 
         if(progressValeu === result){
 
