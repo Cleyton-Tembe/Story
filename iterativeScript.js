@@ -1,63 +1,218 @@
 const questions = [
     {
-        num: 1,
-        question: "are you?",
-        answser: "A. Your Hpwoate",
-        options: [
-            "A. Your Hpwoate",
-            "B. Your Knightmare",
-            "C. Your Fear",
-            "D. Your Demon",
-        ],
-    },
+    num: 1,
+    question: "I was born ____ July",
+    answser: "A. in",
+    options: [
+        "A. in",
+        "B. on",
+        "C. at",
+        "D. by",
+    ],
+},
 
-    {
-        num: 2,
-        question: "Who are you?",
-        answser: "B. Your Knightmare",
-        options: [
-            "A. Something",
-            "B. Your Knightmare",
-            "C. Your Fel;kar",
-            "D. Your Demon",
-        ],
-    },
+{
+    num: 2,
+    question: "Cleyton is allergic ___ peanuts",
+    answser: "C. to",
+    options: [
+        "A. with",
+        "B. for",
+        "C. to",
+        "D. at",
+    ],
+},
 
-    {
-        num: 3,
-        question: "Who are you?",
-        answser:  "D. Your Demon",
-        options: [
-            "A. Really",
-            "B. Your Knightmare",
-            "C. Your Fiear",
-            "D. Your Demon",
-        ],
-    },
+{
+    num: 3,
+    question: "The cat is hiding ___ the bed",
+    answser: "B. under",
+    options: [
+        "A. on",
+        "B. under",
+        "C. behind",
+        "D. over",
+    ],
+},
 
-    {
-        num: 4,
-        question: "Who are you?",
-        answser: "C. Your Fear",
-        options: [
-            "A. Your Hate",
-            "B. Your Knipjmightmare",
-            "C. Your Fear",
-            "D. Somehow",
-        ],
-    },
+{
+    num: 4,
+    question: "___ you married?",
+    answser: "A. Are",
+    options: [
+        "A. Are",
+        "B. Is",
+        "C. Do",
+        "D. Were",
+    ],
+},
 
+{
+    num: 5,
+    question: "____ windy today?",
+    answser: "C. Is it",
+    options: [
+        "A. Are you",
+        "B. Does it",
+        "C. Is it",
+        "D. Has it",
+    ],
+},
+    
     {
-        num: 5,
-        question: "Who are you?",
-        answser: "A. Your Hate",
-        options: [
-            "A. Your Hate",
-            "B. Your Knightmare",
-            "C. Your Get Angry",
-            "D. Your Demon",
-        ],
-    },    
+    num: 6,
+    question: "____ she sad?",
+    answser: "A. Is",
+    options: [
+        "A. Is",
+        "B. Are",
+        "C. Do",
+        "D. Did"
+    ],
+},
+{
+    num: 7,
+    question: "____ the boat sinking?",
+    answser: "B. Is",
+    options: [
+        "A. Are",
+        "B. Is",
+        "C. Does",
+        "D. Was"
+    ],
+},
+{
+    num: 8,
+    question: "____ you coming to the party?",
+    answser: "C. Are",
+    options: [
+        "A. Is",
+        "B. Do",
+        "C. Are",
+        "D. Did"
+    ],
+},
+{
+    num: 9,
+    question: "____ is knocking at the door?",
+    answser: "D. Who",
+    options: [
+        "A. What",
+        "B. Why",
+        "C. Where",
+        "D. Who"
+    ],
+},
+{
+    num: 10,
+    question: "____ does she go every morning?",
+    answser: "A. Where",
+    options: [
+        "A. Where",
+        "B. Who",
+        "C. When",
+        "D. What"
+    ],
+},
+{
+    num: 11,
+    question: "____ is your favorite color?",
+    answser: "C. What",
+    options: [
+        "A. Why",
+        "B. Who",
+        "C. What",
+        "D. Which"
+    ],
+},
+{
+    num: 12,
+    question: "____ do they eat for breakfast?",
+    answser: "D. What",
+    options: [
+        "A. Why",
+        "B. When",
+        "C. Which",
+        "D. What"
+    ],
+},
+{
+    num: 13,
+    question: "____ she play guitar?",
+    answser: "B. Does",
+    options: [
+        "A. Do",
+        "B. Does",
+        "C. Is",
+        "D. Are"
+    ],
+},
+{
+    num: 14,
+    question: "____ you like pizza?",
+    answser: "C. Do",
+    options: [
+        "A. Are",
+        "B. Is",
+        "C. Do",
+        "D. Does"
+    ],
+},
+{
+    num: 15,
+    question: "You are coming, ____?",
+    answser: "A. aren’t you",
+    options: [
+        "A. aren’t you",
+        "B. are they",
+        "C. isn’t he",
+        "D. wasn’t she"
+    ],
+},
+{
+    num: 16,
+    question: "He can't swim, ____?",
+    answser: "B. can he",
+    options: [
+        "A. isn’t he",
+        "B. can he",
+        "C. does he",
+        "D. did he"
+    ],
+},
+{
+    num: 17,
+    question: "They were late, ____ they?",
+    answser: "D. weren’t",
+    options: [
+        "A. isn’t",
+        "B. didn’t",
+        "C. won’t",
+        "D. weren’t"
+    ],
+},
+{
+    num: 18,
+    question: "She ____ know the answer.",
+    answser: "C. doesn’t",
+    options: [
+        "A. don’t",
+        "B. did",
+        "C. doesn’t",
+        "D. do"
+    ],
+},
+{
+    num: 19,
+    question: "They ____ want to go home.",
+    answser: "B. don’t",
+    options: [
+        "A. didn’t",
+        "B. don’t",
+        "C. does",
+        "D. aren’t"
+    ],
+},
 
 ];
 
@@ -207,13 +362,12 @@ function showOption(index){
 }
 
 function showQuestionCount(count){
-    console.log(count)
-    numberQuestion.textContent = `${count+1} of 5`;
+    numberQuestion.textContent = `${count+1} of ${questions.length}`;
 }
 
 function updateScore(){
     score++;
-    scoreChange.textContent = `Score: ${score} / 5`;
+    scoreChange.textContent = `Score: ${score} / ${questions.length}`;
 }
 
 function disableButtons(){
@@ -248,7 +402,9 @@ function calculateResult(){
     const quizScore = document.querySelector('.quiz-score');
     const quizResult = document.querySelector('.progress-bar');
     const quizProgress = document.querySelector('.circular-progress');
-    let result = (score/5)*100;
+    let result = (score/questions.length)*100;
+    result = Math.floor(result);
+    
     let progressValeu = 0;
 
     let loadingProgress = setInterval(()=>{
@@ -267,7 +423,7 @@ function calculateResult(){
     }, 20);
     
     
-    quizScore.textContent = `Your Score is ${score} out of 5`;
+    quizScore.textContent = `Your Score is ${score} out of ${questions.length}`;
 
 }
 
