@@ -1,219 +1,135 @@
 const questions = [
     {
-    num: 1,
-    question: "I was born ____ July",
-    answser: "A. in",
-    options: [
-        "A. in",
-        "B. on",
-        "C. at",
-        "D. by",
-    ],
-},
-
-{
-    num: 2,
-    question: "Cleyton is allergic ___ peanuts",
-    answser: "C. to",
-    options: [
-        "A. with",
-        "B. for",
-        "C. to",
-        "D. at",
-    ],
-},
-
-{
-    num: 3,
-    question: "The cat is hiding ___ the bed",
-    answser: "B. under",
-    options: [
-        "A. on",
-        "B. under",
-        "C. behind",
-        "D. over",
-    ],
-},
-
-{
-    num: 4,
-    question: "___ you married?",
-    answser: "A. Are",
-    options: [
-        "A. Are",
-        "B. Is",
-        "C. Do",
-        "D. Were",
-    ],
-},
-
-{
-    num: 5,
-    question: "____ windy today?",
-    answser: "C. Is it",
-    options: [
-        "A. Are you",
-        "B. Does it",
-        "C. Is it",
-        "D. Has it",
-    ],
-},
-    
+        num: 1,
+        question: "She stayed __ home because of her illness.",
+        answser: "c) at",
+        options: ["a) on", "b) in", "c) at", "d) out"]
+    },
     {
-    num: 6,
-    question: "____ she sad?",
-    answser: "A. Is",
-    options: [
-        "A. Is",
-        "B. Are",
-        "C. Do",
-        "D. Did"
-    ],
-},
-{
-    num: 7,
-    question: "____ the boat sinking?",
-    answser: "B. Is",
-    options: [
-        "A. Are",
-        "B. Is",
-        "C. Does",
-        "D. Was"
-    ],
-},
-{
-    num: 8,
-    question: "____ you coming to the party?",
-    answser: "C. Are",
-    options: [
-        "A. Is",
-        "B. Do",
-        "C. Are",
-        "D. Did"
-    ],
-},
-{
-    num: 9,
-    question: "____ is knocking at the door?",
-    answser: "D. Who",
-    options: [
-        "A. What",
-        "B. Why",
-        "C. Where",
-        "D. Who"
-    ],
-},
-{
-    num: 10,
-    question: "____ does she go every morning?",
-    answser: "A. Where",
-    options: [
-        "A. Where",
-        "B. Who",
-        "C. When",
-        "D. What"
-    ],
-},
-{
-    num: 11,
-    question: "____ is your favorite color?",
-    answser: "C. What",
-    options: [
-        "A. Why",
-        "B. Who",
-        "C. What",
-        "D. Which"
-    ],
-},
-{
-    num: 12,
-    question: "____ do they eat for breakfast?",
-    answser: "D. What",
-    options: [
-        "A. Why",
-        "B. When",
-        "C. Which",
-        "D. What"
-    ],
-},
-{
-    num: 13,
-    question: "____ she play guitar?",
-    answser: "B. Does",
-    options: [
-        "A. Do",
-        "B. Does",
-        "C. Is",
-        "D. Are"
-    ],
-},
-{
-    num: 14,
-    question: "____ you like pizza?",
-    answser: "C. Do",
-    options: [
-        "A. Are",
-        "B. Is",
-        "C. Do",
-        "D. Does"
-    ],
-},
-{
-    num: 15,
-    question: "You are coming, ____?",
-    answser: "A. aren’t you",
-    options: [
-        "A. aren’t you",
-        "B. are they",
-        "C. isn’t he",
-        "D. wasn’t she"
-    ],
-},
-{
-    num: 16,
-    question: "He can't swim, ____?",
-    answser: "B. can he",
-    options: [
-        "A. isn’t he",
-        "B. can he",
-        "C. does he",
-        "D. did he"
-    ],
-},
-{
-    num: 17,
-    question: "They were late, ____ they?",
-    answser: "D. weren’t",
-    options: [
-        "A. isn’t",
-        "B. didn’t",
-        "C. won’t",
-        "D. weren’t"
-    ],
-},
-{
-    num: 18,
-    question: "She ____ know the answer.",
-    answser: "C. doesn’t",
-    options: [
-        "A. don’t",
-        "B. did",
-        "C. doesn’t",
-        "D. do"
-    ],
-},
-{
-    num: 19,
-    question: "They ____ want to go home.",
-    answser: "B. don’t",
-    options: [
-        "A. didn’t",
-        "B. don’t",
-        "C. does",
-        "D. aren’t"
-    ],
-},
-
+        num: 2,
+        question: "He apologized __ being late.",
+        answser: "b) for",
+        options: ["a) with", "b) for", "c) by", "d) that"]
+    },
+    {
+        num: 3,
+        question: "He paid __ cash.",
+        answser: "b) in",
+        options: ["a) with", "b) in", "c) by", "d) for"]
+    },
+    {
+        num: 4,
+        question: "He was prized ___ his hard work.",
+        answser: "c) for",
+        options: ["a) in", "b) by", "c) for", "d) to"]
+    },
+    {
+        num: 5,
+        question: "She is famous __ his paintings.",
+        answser: "b) for",
+        options: ["a) on", "b) for", "c) in", "d) with"]
+    },
+    {
+        num: 6,
+        question: "The train went ____ the tunnel.",
+        answser: "c) through",
+        options: ["a) in", "b) under", "c) through", "d) on"]
+    },
+    {
+        num: 7,
+        question: "She walked ___ the door and left.",
+        answser: "a) out of",
+        options: ["a) out of", "b) across", "c) for", "d) for"]
+    },
+    {
+        num: 8,
+        question: "We need to ___ a decision soon.",
+        answser: "c) make",
+        options: ["a) have", "b) do", "c) make", "d) let"]
+    },
+    {
+        num: 9,
+        question: "She will come ___ Monday.",
+        answser: "b) on",
+        options: ["a) at", "b) on", "c) for", "d) up"]
+    },
+    {
+        num: 10,
+        question: "The road goes ___ the river.",
+        answser: "b) across",
+        options: ["a) at", "b) across", "c) along", "d) down"]
+    },
+    {
+        num: 11,
+        question: "She has been living here ___ 2015.",
+        answser: "c) since",
+        options: ["a) from", "b) for", "c) since", "d) past"]
+    },
+    {
+        num: 12,
+        question: "We traveled ___ car.",
+        answser: "a) by",
+        options: ["a) by", "b) under", "c) in", "d) on"]
+    },
+    {
+        num: 13,
+        question: "The dog ran __ the garden.",
+        answser: "c) across",
+        options: ["a) in", "b) under", "c) across", "d) under"]
+    },
+    {
+        num: 14,
+        question: "The bridge is ___ the river.",
+        answser: "b) over",
+        options: ["a) under", "b) over", "c) in", "d) beyond"],
+    },
+    {
+        num: 15,
+        question: "He jumped ___ the river.",
+        answser: "c) into",
+        options: ["a) at", "b) on", "c) into", "d) below"],
+    },
+    {
+        num: 16,
+        question: "The meeting starts ___ 9 am.",
+        answser: "b) at",
+        options: ["a) in", "b) at", "c) by", "d) over"],
+    },
+    {
+        num: 17,
+        question: "He is good ___ mathematics.",
+        answser: "c) at",
+        options: ["a) by", "b) in", "c) at", "d) over"],
+    },
+    {
+        num: 18,
+        question: "He ran __ the streets to catch the bus.",
+        answser: "b) along",
+        options: ["a) by", "b) along", "c) across", "d) on"]
+    },
+    {
+        num: 19,
+        question: "He is suffering ___ a bad cold.",
+        answser: "c) from",
+        options: ["a) with", "b) by", "c) from"]
+    },
+    {
+        num: 20,
+        question: 'Which question was most likely asked based on the following reply? "I have to work tomorrow"',
+        answser: "d) he said he had to work the following day.",
+        options: [
+            "a) He said he has to work tomorrow.",
+            "b) He says he had to work tomorrow.",
+            "c) he is saying he had to work tomorrow.",
+            "d) he said he had to work the following day."
+        ]
+    },
+    {
+        num: 21,
+        question: "He ____ have said that to you, but at least he apologised.",
+        answser: "b) shouldn't",
+        options: ["a) wouldn't", "b) shouldn't", "c) couldn't", "d) will not"]
+    },
 ];
 
 const startButton = document.querySelector('.btn-start');

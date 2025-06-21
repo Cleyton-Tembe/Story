@@ -417,6 +417,7 @@ main.active{
     align-items: center;
     opacity: 0;
     pointer-events: none;
+    transition: 3.s all;
 }
 
 .quiz-result.active{
